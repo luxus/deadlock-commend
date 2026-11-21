@@ -18,7 +18,7 @@ Valve's post-game layouts change. Runtime injection is used so a layout drift is
 
 ## Build
 
-Needs [modlock](https://github.com/luxus/modlock) (or set `MODLOCK` to a local copy) for the VPK step. Assemble and tests do not need it.
+Needs [modlock](https://github.com/paralin/modlock) (or set `MODLOCK` to a local copy) for the VPK step. Assemble and tests do not need it.
 
 ```sh
 # optional: MODLOCK=/path/to/modlock
