@@ -1,8 +1,11 @@
 # Addon Settings (library)
 
-Vendored unchanged from Improved Quickbuy (`luxus/improved-quickbuy`, `lib/addon-settings`). MIT.
-
 One settings menu for Deadlock Panorama addons: tabs in CompLock HUD++'s menu, or an ADDONS window in the
-Esc menu without HUD++. The highest `BUILD` among installed copies hosts.
+Esc menu without HUD++. Vendored unchanged into each addon; the highest `BUILD` among installed copies hosts.
 
-Do not edit these files in this repo; update the vendor from upstream.
+- `addon_settings.js`: the library (one file, no dependencies).
+- `VERSION`: the library version.
+- `vendor.sh`: puts the library in front of your script (`print`) or into a pak folder (`pak <dir>`).
+
+API, languages and a step-by-step guide for forked mods: [docs/ADDON-SETTINGS-API.md](../../docs/ADDON-SETTINGS-API.md).
+Example client: [examples/hello-addon](../../examples/hello-addon). MIT.

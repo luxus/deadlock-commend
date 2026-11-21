@@ -7,7 +7,7 @@
 // found once and kept. Visibility and dimming are written only on change. Game commend controls
 // are walked only when a button is pressed, never on the timer. HUD++'s panels get no handlers.
 
-const VERSION = 'v1-test';
+const VERSION = '1.0.0';
 const ok = p => !!(p && p.IsValid && p.IsValid());
 const cancel = h => { if (h) { try { $.CancelScheduled(h); } catch (e) { /* already ran */ } } return null; };
 const say = e => { try { $.Msg('Deadlock Commend: ' + e); } catch (x) { /* no console */ } };
@@ -23,7 +23,7 @@ const ctx = $.GetContextPanel();
 const top = () => { let p = ctx; while (ok(p) && ok(p.GetParent())) p = p.GetParent(); return p; };
 const typ = p => { try { return p.paneltype || p.type || ''; } catch (e) { return ''; } };
 
-// TEST BUILD: on, so it can be tried at once; set to false before a release.
+// On by default: the post-game buttons are the feature.
 const COMMEND_DEFAULT = true;
 const DEFAULTS = { commend: COMMEND_DEFAULT };
 const cfg = Object.assign({}, DEFAULTS);
@@ -317,6 +317,7 @@ const stop = () => {
 
 const SCHEMA = {
 	id: 'deadlock_commend', title: '#Dc_Tab', prefix: 'Dc', strings: STRINGS,
+	resetLabel: '#Dc_Reset',
 	controls: [
 		{ key: 'commend', type: 'toggle', section: '#Dc_Section', title: '#Dc_Commend', desc: '#Dc_Commend_Desc', default: DEFAULTS.commend }
 	]

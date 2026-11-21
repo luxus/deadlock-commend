@@ -6,7 +6,7 @@ const C = { sched: 0, finds: 0, nodes: 0, childReads: 0, reads: 0, classWrites: 
 const resetCounts = () => Object.keys(C).forEach(k => { C[k] = 0; });
 
 let now = 0, seq = 0, jobs = [], handlers = [], errors = [], info = [];
-const INFO = /^(Deadlock Commend: v\d+[\w +.-]* loaded|Addon Settings: (build \d+ hosts|no Esc menu ))/;
+const INFO = /^(Deadlock Commend: v?\d[\w +.-]* loaded|Addon Settings: (build \d+ hosts|no Esc menu ))/;
 const storage = {};
 const net = { online: true, writes: [] };
 
@@ -35,6 +35,7 @@ class P {
 	GetChild(i) { C.childReads++; return this.kids[i] || null; }
 	MoveChildBefore(c, b) { this.kids.splice(this.kids.indexOf(c), 1); this.kids.splice(this.kids.indexOf(b), 0, c); }
 	DeleteAsync() { this.valid = false; if (this.parent) this.parent.kids.splice(this.parent.kids.indexOf(this), 1); }
+	Activate() { $.DispatchEvent('Activated', this); }
 	SetURL(url) {
 		const title = t => $.Schedule(0.05, () => handlers.filter(h => h.p === this && h.ev === 'HTMLTitle').forEach(h => h.f(this, t)));
 		const hash = url.split('#')[1];
@@ -59,7 +60,8 @@ global.$ = {
 	},
 	Localize: s => s, Msg: m => { (INFO.test(m) ? info : errors).push('msg: ' + m); },
 	RegisterForUnhandledEvent: (ev, f) => handlers.push({ ev, p: null, f }),
-	RegisterEventHandler: (ev, p, f) => handlers.push({ ev, p, f })
+	RegisterEventHandler: (ev, p, f) => { const id = ++seq; handlers.push({ ev, p, f, id }); return id; },
+	UnregisterEventHandler: (ev, p, id) => { handlers = handlers.filter(h => h.id !== id); },
 };
 
 const advance = secs => {
