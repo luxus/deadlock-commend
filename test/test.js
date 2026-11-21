@@ -21,8 +21,8 @@ const gameClicks = () => H.clicks.filter(c => c.id === 'CommendPlayerButton' || 
 
 start();
 assert(S.errors.length === 0, 'no errors at start: ' + S.errors.join(' | '));
-assert(/const COMMEND_DEFAULT = true;/.test(SRC), 'test build: Commend buttons on by default (one constant)');
-assert(S.info.some(m => /Deadlock Commend: v1-test loaded/.test(m)), 'console line v1-test loaded: ' + S.info.join(' | '));
+assert(/const COMMEND_DEFAULT = true;/.test(SRC), 'Commend buttons on by default (one constant)');
+assert(S.info.some(m => /Deadlock Commend: 1.0.0 loaded/.test(m)), 'console line 1.0.0 loaded: ' + S.info.join(' | '));
 
 // rows injected; only the current screen (MVP) is visible
 assert(!!byId('DcRow_MVP') && !!byId('DcRow_Team1') && !!byId('DcRow_Team2') && !!byId('DcRow_Scoreboard'), 'a button row on Team1, Team2, Scoreboard and MVP');

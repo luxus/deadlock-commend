@@ -3,6 +3,7 @@
 const STRINGS = {
 	english: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Reset Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commend buttons',
 		Dc_Commend_Desc: 'On the post-game screens, buttons to commend your team, the enemy, everyone, or to return commends.',
@@ -13,6 +14,7 @@ const STRINGS = {
 	},
 	german: { // Swiss ss
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Commend zurücksetzen',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commend-Tasten',
 		Dc_Commend_Desc: 'Auf den Bildschirmen nach dem Match: Tasten, um dein Team, die Gegner oder alle zu commenden, oder Commends zurückzugeben.',
@@ -23,6 +25,7 @@ const STRINGS = {
 	},
 	french: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Réinitialiser Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Boutons de commend',
 		Dc_Commend_Desc: 'Sur les écrans d\'après-match : boutons pour recommander votre équipe, l\'ennemi, tout le monde, ou renvoyer les commends.',
@@ -33,6 +36,7 @@ const STRINGS = {
 	},
 	spanish: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Restablecer Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Botones de commend',
 		Dc_Commend_Desc: 'En las pantallas de fin de partida: botones para recomendar a tu equipo, al enemigo, a todos, o devolver commends.',
@@ -43,6 +47,7 @@ const STRINGS = {
 	},
 	latam: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Restablecer Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Botones de commend',
 		Dc_Commend_Desc: 'En las pantallas de fin de partida: botones para recomendar a tu equipo, al enemigo, a todos, o devolver commends.',
@@ -53,6 +58,7 @@ const STRINGS = {
 	},
 	brazilian: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Redefinir Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Botões de commend',
 		Dc_Commend_Desc: 'Nas telas pós-partida: botões para recomendar seu time, o inimigo, todos, ou retribuir commends.',
@@ -63,6 +69,7 @@ const STRINGS = {
 	},
 	italian: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Ripristina Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Pulsanti commend',
 		Dc_Commend_Desc: 'Nelle schermate post-partita: pulsanti per raccomandare la tua squadra, i nemici, tutti, o ricambiare i commend.',
@@ -73,6 +80,7 @@ const STRINGS = {
 	},
 	polish: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Resetuj Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Przyciski commend',
 		Dc_Commend_Desc: 'Na ekranach po meczu: przyciski do polecenia swojej drużyny, wrogów, wszystkich, albo oddania commend.',
@@ -83,6 +91,7 @@ const STRINGS = {
 	},
 	czech: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Resetovat Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Tlačítka commend',
 		Dc_Commend_Desc: 'Na obrazovkách po zápase: tlačítka pro commend týmu, soupeřů, všech, nebo pro opětování.',
@@ -93,6 +102,7 @@ const STRINGS = {
 	},
 	russian: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Сбросить Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Кнопки commend',
 		Dc_Commend_Desc: 'На экранах после матча: кнопки, чтобы отметить свою команду, врагов, всех, или ответить на commend.',
@@ -103,6 +113,7 @@ const STRINGS = {
 	},
 	ukrainian: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Скинути Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Кнопки commend',
 		Dc_Commend_Desc: 'На екранах після матчу: кнопки, щоб відзначити свою команду, ворогів, усіх, або відповісти на commend.',
@@ -113,6 +124,7 @@ const STRINGS = {
 	},
 	turkish: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Commend\'ı sıfırla',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commend düğmeleri',
 		Dc_Commend_Desc: 'Maç sonu ekranlarında: takımını, rakibi, herkesi commend etmek veya commendleri iade etmek için düğmeler.',
@@ -123,6 +135,7 @@ const STRINGS = {
 	},
 	indonesian: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Reset Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Tombol commend',
 		Dc_Commend_Desc: 'Di layar pasca-pertandingan: tombol untuk commend tim, lawan, semua orang, atau membalas commend.',
@@ -133,6 +146,7 @@ const STRINGS = {
 	},
 	thai: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'รีเซ็ต Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'ปุ่ม commend',
 		Dc_Commend_Desc: 'บนหน้าจอหลังแมตช์: ปุ่มสำหรับ commend ทีม ฝ่ายตรงข้าม ทุกคน หรือตอบกลับ commend',
@@ -143,6 +157,7 @@ const STRINGS = {
 	},
 	japanese: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Commendをリセット',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commendボタン',
 		Dc_Commend_Desc: '試合後の画面で、味方・敵・全員をcommendしたり、commendを返ししたりするボタン。',
@@ -153,6 +168,7 @@ const STRINGS = {
 	},
 	koreana: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: 'Commend 초기화',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commend 버튼',
 		Dc_Commend_Desc: '경기 종료 화면에서 아군, 적, 모두 commend하거나 commend를 돌려주는 버튼.',
@@ -163,6 +179,7 @@ const STRINGS = {
 	},
 	schinese: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: '重置 Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commend 按钮',
 		Dc_Commend_Desc: '在赛后界面：用于称赞己方、敌方、所有人，或回赠 commend 的按钮。',
@@ -173,6 +190,7 @@ const STRINGS = {
 	},
 	tchinese: {
 		Dc_Tab: 'Commend',
+		Dc_Reset: '重置 Commend',
 		Dc_Section: 'Commend',
 		Dc_Commend: 'Commend 按鈕',
 		Dc_Commend_Desc: '在賽後畫面：用來稱讚己方、敵方、所有人，或回贈 commend 的按鈕。',

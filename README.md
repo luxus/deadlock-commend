@@ -2,19 +2,20 @@
 
 Post-game buttons in [Deadlock](https://store.steampowered.com/app/1422450/Deadlock/) to commend your team, the enemy, everyone, or to return commends.
 
-This is a test build (`v1-test`). There is no GitHub Release and no DMM download yet. It is registered in [luxus/deadlock-mods](https://github.com/luxus/deadlock-mods) as unavailable until a release exists.
+Written from scratch. It contains no code or assets from other commend mods. Settings use our Addon Settings library, vendored from [Improved Quickbuy](https://github.com/luxus/improved-quickbuy) (library 1.1.3, BUILD 5).
 
-Written from scratch. It contains no code or assets from other commend mods. Settings and the Addon Settings library are ours, vendored from [Improved Quickbuy](https://github.com/luxus/improved-quickbuy).
+Listed in the [luxus Deadlock mods](https://luxus.github.io/deadlock-mods/) registry.
 
 ## What it does
 
 - Four buttons on the Team, Scoreboard and MVP post-game screens: Team, Enemy, All, Return
-- One "Commend buttons" toggle in settings (default on in this test build)
+- One "Commend buttons" toggle in settings (on by default)
 - A "Commend" tab in [CompLock HUD++](https://deadlockconfig.com/), or an ADDONS window in the Esc menu without HUD++
+- "Reset Commend" on the right of the settings foot puts the toggle back to the default
+- Toggle descriptions appear as a tooltip on hover, like HUD++'s own rows
 - The script loads only with the post-game layouts. While the buttons can be shown it ticks at 1 Hz; it does not walk the game's commend controls until a button is pressed
-- HUD++'s own panels never get event handlers
 
-Valve's post-game layouts change. Runtime injection is used so a layout drift is less likely to blank the screen; that still needs a real match to confirm.
+Valve's post-game layouts change. Runtime injection is used so a layout drift is less likely to blank the screen; that still needs a finished match to confirm. The buttons appear on the post-game Team, Scoreboard and MVP screens, not in the main menu.
 
 ## Build
 
@@ -28,17 +29,14 @@ sh test/mutants.sh
 sh tools/build.sh   # writes build/deadlock-commend.vpk
 ```
 
-## Install a test VPK (manual)
+## Install
 
-Do this only while Deadlock is not running. This addon is its own pak, not part of Improved Quickbuy.
+Do this only while Deadlock is not running.
 
-1. Quit Deadlock completely.
-2. Go to `Deadlock/game/citadel/addons/`.
-3. If you already have a third-party Commend pak, it is often `pak10_dir.vpk`. Move that file aside to `~/Downloads/deadlock-mods/` (create the folder if needed). Do not overwrite `pak04` (Improved Quickbuy) and do not edit `pak10` in place.
-4. Copy `build/deadlock-commend.vpk` to a **free** slot as `pakNN_dir.vpk`. On lea, `pak09` is a reasonable free slot (`pak02`, `pak03`, `pak09`, `pak12` and others were free at the time of this test). If the chosen slot already has a file, back that file up first.
-5. Start Deadlock, finish a match, and check the console for `Deadlock Commend: v1-test loaded`.
+- With [shiv](https://github.com/luxus/shiv) or [Deadlock Mod Manager](https://deadlockmods.app/): add the source `https://luxus.github.io/deadlock-mods/dmm-source.json` and install Deadlock Commend, or use the buttons on https://luxus.github.io/deadlock-mods/ and https://luxus.github.io/deadlock-commend/.
+- Manual: download `deadlock-commend-1.0.0.vpk` from the [GitHub release](https://github.com/luxus/deadlock-commend/releases/tag/v1.0.0), rename it to a free slot such as `pak08_dir.vpk` or later, and put it into `Deadlock/game/citadel/addons/`. Slots 01–07 are reserved for CompLock. [CompLock HUD++](https://deadlockconfig.com/) is optional.
 
-To go back: quit Deadlock, remove this pak, and restore the backup.
+Start Deadlock, finish a match, and check the console for `Deadlock Commend: 1.0.0 loaded`.
 
 ## License
 

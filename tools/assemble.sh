@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.."
 rm -rf build/pak && mkdir -p build/pak/panorama/scripts build/pak/panorama/styles \
 	build/pak/panorama/layout/post_game
 {
-	echo '// Deadlock Commend v1-test - built from src/ by tools/build.sh. Written from scratch; no third-party commend-mod code included.'
+	echo '// Deadlock Commend 1.0.0 - built from src/ by tools/build.sh. Written from scratch; no third-party commend-mod code included.'
 	echo '(() => {'
 	echo "'use strict';"
 	sh lib/addon-settings/vendor.sh print
